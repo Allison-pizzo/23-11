@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversor de String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-field {
+            margin-bottom: 20px;
+        }
+        .input-field input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3e8e41;
+        }
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Inverter Sequência</h2>
+        <div class="input-field">
+            <input type="text" id="input-string" placeholder="Digite uma frase">
+        </div>
+        <button class="button" id="reverse-button">Inverter</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const inputField = document.getElementById('input-string');
+        const reverseButton = document.getElementById('reverse-button');
+        const resultDiv = document.getElementById('result');
+
+        reverseButton.addEventListener('click', () => {
+            const inputString = inputField.value;
+            const reversedString = inputString.split('').reverse().join('');
+            resultDiv.textContent = `frase invertida: ${reversedString}`;
+        });
+    </script>
+</body>
+</html>
